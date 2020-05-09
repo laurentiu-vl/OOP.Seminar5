@@ -9,7 +9,8 @@ Auto* AutoInMemoryRepository::findTheOne(int id)
 {
 	for (int i = 0; i < autos.size(); i++)
 	{
-		if (autos[i]->get_id() == id) return autos[i];
+		if (autos[i]->get_id() == id) 
+			return autos[i];
 	}
 	return nullptr;
 }
@@ -38,7 +39,7 @@ Auto* AutoInMemoryRepository::deleted(int id)
 	{
 		if (autos[i]->get_id() == id)
 		{
-			cout << "intra\n";
+			
 			Auto* aux = autos[i];
 			//delete autos[i];
 			autos.erase(autos.begin() + i);
